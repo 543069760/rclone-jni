@@ -6,6 +6,8 @@ import (
 
 	_ "github.com/rclone/rclone/backend/all" // import all backends
 	_ "github.com/rclone/rclone/lib/plugin"  // import plugins
+    _ "github.com/rclone/rclone/cmd/serve"        // 注册 serve/start、serve/stop、serve/list 等 rc 方法
+	_ "github.com/rclone/rclone/cmd/serve/restic" // 注册 serve type=restic(内部已 import cmd/serve)
 
 	_ "golang.org/x/mobile/event/key" // make go.mod add this as a dependency
 )
